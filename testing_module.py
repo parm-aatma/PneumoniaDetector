@@ -6,8 +6,8 @@ import glob
 import numpy as np
 
 
-model=load_model('C:/Users/shiva/Desktop/2.0/save.hdf5')
-paths=glob.glob('C:\Enlighten here\Essentials\Machine Learning\MyProjects\Kaggle-Pneumonia Detecttor\Data\chest_xray\chest_xray/val\PNEUMONIA/*.jpeg')
+model=load_model('model.hdf5')
+paths=glob.glob('*.jpeg')  #The directory where the images are stored
 print(len(paths))
 for path in paths:
     img=image.load_img(path,target_size=(256,256))
